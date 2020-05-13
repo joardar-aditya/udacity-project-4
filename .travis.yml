@@ -1,5 +1,7 @@
 language: minimal
 
+node_js: 0.10
+
 services:
   - docker
 
