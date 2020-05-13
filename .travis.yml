@@ -10,11 +10,9 @@ services:
 script:
   - docker --version # print the version for logging
   - cd udacity-c3-frontend
-  - travis_wait npm i
   - travis_wait docker build -t . jordan27docker/udacity-project-4-frontend
   - cd ..
   - cd udacity-c3-restapi-user
-  - travis_wait npm i
   - travis_wait docker build -t . jordan27docker/udacity-project-4-backend-user
 
 
