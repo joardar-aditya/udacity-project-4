@@ -10,7 +10,7 @@ services:
 script:
   - docker --version # print the version for logging
   - cd udacity-c3-frontend
-  - docker build -t udacity-project-4-frontend .
+  - travis_wait docker build -t udacity-project-4-frontend .
   - docker tag udacity-project-4-frontend jordan27docker/udacity-project-4-frontend:latest
 
 after_success:
