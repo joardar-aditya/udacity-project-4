@@ -11,8 +11,6 @@ RUN npm ci
 COPY . .
 RUN ionic build
 
-WORKDIR /www/src/app
-
 EXPOSE 8100
 
 ENTRYPOINT ["ionic"]
