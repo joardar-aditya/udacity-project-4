@@ -1,6 +1,7 @@
-language: minimal
+language: node_js
 
-node_js: 0.10
+node_js: 
+  - "12.13"
 
 services:
   - docker
