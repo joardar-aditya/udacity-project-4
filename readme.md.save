@@ -1,0 +1,10 @@
+##Front End for the Udagram
+
+Images created using the travis CI Build
+
+
+###Deployment
+
+Deploy the frontend in the given cluster using command -:
+
+<code> kubectl create deployment "name-of-deployment" --image="jordan27docker/udacity-project-4-frontend
