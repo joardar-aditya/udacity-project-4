@@ -6,14 +6,16 @@ services:
 
 
 # Scripts to be run such as tests
+before_install:
+  - npm i -g npm@6.14.5
 
 script:
   - docker --version # print the version for logging
   - cd udacity-c3-frontend
-  - travis_wait docker build -t . jordan27docker/udacity-project-4-frontend
+  - travis_wait docker build . -t jordan27docker/udacity-project-4-frontend
   - cd ..
   - cd udacity-c3-restapi-user
-  - travis_wait docker build -t . jordan27docker/udacity-project-4-backend-user
+  - travis_wait docker build . -t  jordan27docker/udacity-project-4-backend-user
 
 
 after_success:
