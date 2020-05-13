@@ -6,14 +6,15 @@ WORKDIR /usr/src/app
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 COPY package*.json ./
-RUN npm install
 RUN npm ci
 # Bundle app source
 COPY . .
 RUN ionic build
 
-## Run 
-FROM nginx:alpine
-#COPY www /usr/share/nginx/html
-COPY --from=ionic  /usr/src/app/www /usr/share/nginx/html
+EXPOSE 8100
+
+ENTRYPOINT ["ionic"]
+CMD ["serve", "8100", "--address", "0.0.0.0"]
+
+
 
